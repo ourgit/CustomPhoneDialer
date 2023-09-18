@@ -13,11 +13,10 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import customphonedialer.abror96.customphonedialer.R;
 import kotlin.collections.ArraysKt;
 
 import static android.Manifest.permission.CALL_PHONE;
-import static android.support.v4.content.PermissionChecker.PERMISSION_GRANTED;
+import static androidx.core.content.PermissionChecker.PERMISSION_GRANTED;
 import static android.telecom.TelecomManager.ACTION_CHANGE_DEFAULT_DIALER;
 import static android.telecom.TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME;
 
@@ -54,7 +53,7 @@ public class DialerActivity extends AppCompatActivity {
     }
 
     private void makeCall() {
-        if (android.support.v4.content.PermissionChecker.checkSelfPermission(this, CALL_PHONE) == PERMISSION_GRANTED) {
+        if (androidx.core.content.PermissionChecker.checkSelfPermission(this, CALL_PHONE) == PERMISSION_GRANTED) {
             Uri uri = Uri.parse("tel:"+phoneNumberInput.getText().toString().trim());
             startActivity(new Intent(Intent.ACTION_CALL, uri));
         }
