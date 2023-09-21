@@ -3,9 +3,6 @@ package customphonedialer.abror96.customphonedialer;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.telecom.TelecomManager;
 import android.view.KeyEvent;
 import android.widget.EditText;
@@ -19,6 +16,10 @@ import static android.Manifest.permission.CALL_PHONE;
 import static androidx.core.content.PermissionChecker.PERMISSION_GRANTED;
 import static android.telecom.TelecomManager.ACTION_CHANGE_DEFAULT_DIALER;
 import static android.telecom.TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DialerActivity extends AppCompatActivity {
 

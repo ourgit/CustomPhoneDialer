@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.telecom.Call;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,6 +22,8 @@ import io.reactivex.functions.Predicate;
 import kotlin.collections.CollectionsKt;
 
 import static customphonedialer.abror96.customphonedialer.Constants.asString;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CallActivity extends AppCompatActivity {
 
