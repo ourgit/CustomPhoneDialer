@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="customphonedialer.abror96.customphonedialer">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -28,6 +32,8 @@
                 <!-- Handle links from other applications -->
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.DIAL" />
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+                <category android:name="android.intent.category.LAUNCHER" />
                 <!-- Populate the system chooser -->
                 <category android:name="android.intent.category.DEFAULT" />
                 <!-- Handle links in browsers -->

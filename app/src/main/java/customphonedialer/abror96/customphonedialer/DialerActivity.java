@@ -1,6 +1,10 @@
 package customphonedialer.abror96.customphonedialer;
 
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telecom.TelecomManager;
@@ -64,6 +68,19 @@ public class DialerActivity extends AppCompatActivity {
         TelecomManager telecomManager = (TelecomManager) getSystemService(TELECOM_SERVICE);
 
         if (!getPackageName().equals(telecomManager.getDefaultDialerPackage())) {
+
+//            mDeviceAdmin = new ComponentName(this, AdminReceiver.class);
+//            mDpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+//
+//            mDpm.setApplicationHidden(mDeviceAdmin, "com.google.android.dialer", true);
+//
+//
+//            IntentFilter filter = new IntentFilter();
+//            filter.addAction(Intent.ACTION_DIAL);
+//            ComponentName activity = new ComponentName("com.dialer_app", "com.dialer_app.MainActivity");
+//            mDpm.addPersistentPreferredActivity(mDeviceAdmin, filter, activity);
+
+
             Intent intent = new Intent(ACTION_CHANGE_DEFAULT_DIALER)
                     .putExtra(EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, getPackageName());
             startActivity(intent);
